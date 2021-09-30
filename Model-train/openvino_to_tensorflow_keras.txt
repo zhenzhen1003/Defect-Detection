@@ -1,0 +1,29 @@
+#openvino转tflite、keras、save_model、权重量化、float16量化、无量化的float32
+
+#安装转换工具
+pip3 install openvino2tensorflow --upgrade
+
+#ubuntu转换命令
+openvino2tensorflow \
+--model_path /home/zhenzhen/openvino2tensorflow/tflite/u2netp.xml \
+--model_output_path /home/zhenzhen/openvino2tensorflow/tflite \
+--output_saved_model \
+--output_h5 \
+--output_pb \
+--output_no_quant_float32_tflite \
+--output_weight_quant_tflite \
+--output_float16_quant_tflite \
+--output_integer_quant_tflite \
+--output_full_integer_quant_tflite
+
+#windows转换命令
+python E:/Desk/openvino2tensorflow-main/openvino2tensorflow/openvino2tensorflow.py --model_path D:/tflite/u2netp.xml --model_output_path D:/tflite --output_no_quant_float32_tflite --output_weight_quant_tflite
+
+#或
+
+openvino2tensorflow \
+--model_path /home/zhenzhen/openvino2tensorflow/tflite/u2netp.xml \
+--model_output_path /home/zhenzhen/openvino2tensorflow/tflite \
+--output_no_quant_float32_tflite \
+--output_integer_quant_tflite \
+--output_full_integer_quant_tflite
